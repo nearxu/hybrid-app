@@ -24,7 +24,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import Test from './page/test/index';
+// import Test from './page/test/index';
+import NavigateComponent from './page/navigate/index';
 
 const App: () => React$Node = () => {
   return (
@@ -34,7 +35,7 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <Test />
+          <NavigateComponent />
         </ScrollView>
       </SafeAreaView>
     </>
