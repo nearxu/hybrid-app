@@ -21,15 +21,15 @@ class Todo extends Component {
   }
 }
 class TodoList extends Component {
-  _renderItem(data) {
+  _renderItem = data => {
+    console.log(this.props, 'render item');
     let {toggleTodo} = this.props;
     let dataItem = data.item;
     const {id} = dataItem;
     return <Todo {...dataItem} onClick={() => toggleTodo(id)} />;
-  }
+  };
   render() {
     const {todos} = this.props;
-    console.log(todos, 'todos');
     return (
       <FlatList
         data={todos}
@@ -55,9 +55,8 @@ const getVisiTodos = (todos, filter) => {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
-    todos: getVisiTodos(state.todos, state.filter),
+    todos: getVisiTodos(state.todos, state.visiFilter),
   };
 };
 

@@ -12,6 +12,7 @@ const Index = () => {
     <>
       <AddTodo />
       <TodoList />
+      <Footer />
     </>
   );
 };
